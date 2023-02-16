@@ -18,7 +18,11 @@ function App() {
       <h1>Products List</h1>
       {products && products.map((product)=>{
         return(
-          <ProductCard title={product.title} price={product.price}/>
+          <ProductCard
+          key={product.id}
+          title={product.title} 
+          image={product.image}
+          price={product.price}/>
         )
       })}
     </div>
